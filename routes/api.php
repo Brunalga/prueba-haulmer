@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventoController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/events', [EventoController::class, 'infoEventoRelevante']);
+Route::get('/events-full', [EventoController::class, 'infoEventoCompleta']);
+Route::get('/event/{id}', [EventoController::class, 'infoEventoEspecificoCompleta']);
+Route::post('/purchase', [EventoController::class, 'crearCompra']);
+Route::get('/orders/{rut_cliente}', [EventoController::class, 'listarComprasCliente']);
