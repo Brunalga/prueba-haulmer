@@ -1,66 +1,90 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Evaluacion Tecnica Haulmer
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Instrucciones de uso
 
-## About Laravel
+1. Clonar el repositorio: Abre una terminal o línea de comandos y ejecuta el siguiente comando para clonar el repositorio en tu máquina local.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```
+git clone git@github.com:Brunalga/prueba-haulmer.git
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+2. Instalar dependencias: Una vez que el repositorio ha sido clonado, ingresa al directorio del proyecto y ejecuta el siguiente comando para instalar las dependencias del proyecto con Composer.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```
+cd prueba-haulmer
+composer install
+```
 
-## Learning Laravel
+3. Ejecutar el servidor: Inicia el servidor de desarrollo de Laravel para probar la aplicación en tu navegador
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```
+php artisan serve
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Ejecucion de pruebas
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Asegúrate de tener el archivo JSON `Pruebas_Haulmer.postman_collection.json` con la colección de pruebas descargado en tu computadora (incluido en el repo).
 
-## Laravel Sponsors
+2. Instala Postman: Si aún no tienes Postman instalado en tu computadora, descárgalo e instálalo desde el sitio web oficial de Postman (https://www.postman.com/downloads/).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. Importar la colección de pruebas: Abre Postman y haz clic en el botón "Import" en la esquina superior izquierda de la interfaz. Selecciona la opción "File" y luego navega hasta el archivo JSON de la colección de pruebas que descargaste previamente. Postman importará automáticamente la colección y mostrará todas las solicitudes de la misma en el panel izquierdo.
 
-### Premium Partners
+4. Importar la colección de pruebas: Abre Postman y haz clic en el botón "Import" en la esquina superior izquierda de la interfaz. Selecciona la opción "File" y luego navega hasta el archivo JSON de la colección de pruebas que descargaste previamente. Postman importará automáticamente la colección y mostrará todas las solicitudes de la misma en el panel izquierdo.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+## Mejoras
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Utilizar Modelos de Laravel para Eventos y Compras (NO REALIZADO) :
 
-## Code of Conduct
+En lugar de usar arrays para representar eventos y compras, considera crear modelos para ellos.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Validación de datos:
 
-## Security Vulnerabilities
+Para el método crearCompra, es esencial validar los datos de entrada de la solicitud para asegurarse de que estén en el formato esperado y contengan toda la información necesaria. Puedes utilizar las funciones de validación de Laravel para lograr esto.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Manejo de errores con Try-Catch:
 
-## License
+Cuando trabajas con arrays o interacciones con la base de datos, es importante manejar los errores de manera adecuada. Envuelve los accesos a arrays o las operaciones con la base de datos en bloques try-catch para capturar cualquier excepción que pueda ocurrir.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Formato de Respuesta de Error:
+
+Estandariza el formato de respuesta de error para la API. En lugar de devolver respuestas genéricas con códigos de estado, puedes crear un formato de respuesta de error más estructurado con un mensaje de error estándar.
+
+### Utilizar la Validación de Solicitudes:
+
+Para crearCompra, puedes usar la validación de Laravel en FormRequest para manejar las reglas de validación de la solicitud de manera más efectiva.
+
+### Utilizar Constantes:
+
+Para valores como America/Santiago, considera definirlos como constantes para evitar valores codificados en el código.
+
+### Manejo adecuado de Excepciones:
+
+En el método infoEventoEspecificoCompleta, estás devolviendo una respuesta 404 si no se encuentra el evento. En lugar de usar el operador de fusión nula (??) para manejar el caso en que no se encuentra el evento, es mejor lanzar una excepción y manejarla utilizando el mecanismo de manejo de excepciones de Laravel.
+
+### Manejo de Errores para listarComprasCliente:
+
+Actualmente, si no se encuentran compras para un cliente, la API devuelve un array vacío. Considera devolver una respuesta de error adecuada con un código de estado HTTP apropiado en su lugar.
+
+## Supuestos y estructura
+
+### Descripción general del controlador de eventos
+
+El controlador de eventos es responsable de manejar todas las solicitudes relacionadas con eventos en la aplicación. Proporciona varios endpoints para obtener información relevante sobre eventos, detalles específicos de un evento, crear compras y listar compras de un cliente.
+
+### Estructura de datos
+
+El controlador utiliza una estructura de datos en forma de matriz para simular una base de datos. La matriz llamada $eventos contiene información sobre diferentes eventos, mientras que la matriz $compras almacena detalles de las compras realizadas.
+
+### Endpoints disponibles
+
+-   GET /eventos/relevantes: Devuelve información relevante de todos los eventos en formato JSON.
+-   GET /eventos/completos: Devuelve información completa de todos los eventos en formato JSON.
+-   GET /eventos/{id}: Devuelve información completa de un evento específico según su ID en formato JSON.
+-   POST /comprar: Permite realizar una compra para un evento específico. Se deben proporcionar los siguientes datos en el cuerpo de la solicitud: id_evento (ID del evento), cliente (nombre del cliente) y cantidad_tickets (cantidad de tickets a comprar).
+
+### Validación y manejo de errores
+
+El controlador utiliza la función validate proporcionada por Laravel para validar los datos de entrada antes de procesar cualquier solicitud. Si los datos no son válidos, se devolverá una respuesta de error con el código HTTP 422 (Unprocessable Entity) y un mensaje explicativo de los errores de validación.
+
+Para manejar excepciones durante la ejecución de la función crearCompra, se ha utilizado un bloque try-catch. Si ocurre alguna excepción, el controlador capturará el error y devolverá una respuesta de error adecuada con el código HTTP correspondiente y el mensaje de error apropiado.
